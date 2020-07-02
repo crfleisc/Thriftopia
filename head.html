@@ -1,0 +1,38 @@
+<script>
+				$('#banner').on('click', function(){
+					$('#content').load('carousel.html');
+				});
+			
+				$('#home').on('click', function(){
+					$('#content').load('carousel.html');
+				});
+			
+				$('#about').on('click', function(){
+					$('#content').load('about.html');
+				});
+							
+				$('#gallery').on('click', function(){
+					$('#content').load('gallery.html');
+				});
+				
+				$('#contact').on('click', function(){
+					$('#content').load('contact.html');
+				});
+</script>
+<div class='container' style='display: inline-block;'>
+	<a href='https://plus.google.com/+Thriftopiayyc/posts'><img class='float-right mx-1' src='img/googlePlus.webp'></a>
+	<a href='https://twitter.com/hashtag/thriftopia?lang=en'><img class='float-right mx-1' src='img/twitter.webp'></a>
+	<a href='https://www.facebook.com/thriftopiayyc/'><img class='float-right mx-1' src='img/facebook.webp'></a>
+</div>
+		
+<div class='jumbotron jumbotron-fluid p-0 m-0'> 
+	<h1 id='banner' class='colour_1 text-center font-weight-bold'>THRIFTOPIA</h1>
+</div>
+
+
+<div class="btn-group btn-block">
+	<button type="button" class="btn btn-secondary" id='home'>Home</button>
+	<button type="button" class="btn btn-secondary" id='about'>About</button>
+	<button type="button" class="btn btn-secondary" id='gallery'>Gallery</button>
+	<button type="button" class="btn btn-secondary" id='contact'>Contact</button>
+</div>

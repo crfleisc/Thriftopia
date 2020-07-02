@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset='utf-8'>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.1.1/build/ol.js"></script>
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.1.1/css/ol.css" type="text/css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<script>		
+			$(document).ready(function() {
+				$('#header').load('head.html');
+				$('#content').load('carousel.html');	
+			});
+		</script>
+	</head>
+	
+	<header>
+		<div class='container-fluid bg-dark px-0' style='height: 2em'></div>
+		<div class='container-fluid colour_1 px-0' style='height:1em'></div>
+		
+
+		<div class='row mx-0 justify-content-center'>
+			<div class='col-2 colour_1'></div>
+			<div class ='col colour_1' id='header'></div>
+			<div class='col-2 colour_1'></div>
+		</div>
+
+	</header>	
+
+	<body>
+		<div class='container-fluid colour_1'>
+			<div class='row justify-content-center '>
+				<div class='col-2'></div>
+				<div class ='col mh-50 mw-90' id='content'></div>
+				<div class='col-2'></div>
+			</div>
+		</div>
+	</body>
+	
+	<footer>
+		<div class='container-fluid colour_1 px-0' style='height:2em'></div>
+		<div class='container-fluid bg-dark px-0' style='height: 2em'></div>
+	</footer>
+	
+</html>

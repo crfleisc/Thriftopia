@@ -1,0 +1,76 @@
+<script>
+	$('.galleryImg').click(function(){
+		$('.modal-body').empty();
+		$($(this).html()).appendTo('.modal-body');
+	});
+</script>
+<h4 class='pl-3 pt-3 mb-0 bg-light'>
+Gallery
+</h4>
+
+<div class='container'>
+	<div class='row'>
+		<div class='col-1 bg-light'></div>
+		<div class='col bg-light pt-2'>
+			<p>
+				Great atmosphere, flat prices, amazing brands, thats what thrifting is 
+				at THRIFTOPIA. Stop by and check us out. 
+			</p>
+		</div>
+		<div class='col-1 bg-light'></div>
+	</div>
+</div>
+<div class='galleryItem bg-light pb-4' style='text-align: center'>
+	<a href="#" class="galleryImg" data-toggle="modal" data-target="#imageModal"">
+		<image src='img/inside0.jpg' class='img'></image>
+	</a>
+	<a href="#" class="galleryImg" data-toggle="modal" data-target="#imageModal"">
+		<image src='img/inside1.png' class='img'></image>
+	</a>
+	<a href="#" class="galleryImg" data-toggle="modal" data-target="#imageModal"">
+		<image src='img/inside2.jpg' class='img'></image>
+	</a>
+	<a href="#" class="galleryImg" data-toggle="modal" data-target="#imageModal"">
+		<image src='img/inside3.gif' class='img'></image>
+	</a>
+	<a href="#" class="galleryImg" data-toggle="modal" data-target="#imageModal"">
+		<image src='img/inside4.jpg' class='img'></image>
+	</a>
+	<a href="#" class="galleryImg" data-toggle="modal" data-target="#imageModal"">
+		<image src='img/inside5.jpg' class='img'></image>
+	</a>
+	<a href="#" class="galleryImg" data-toggle="modal" data-target="#imageModal"">
+		<image src='img/inside6.jpg' class='img'></image>
+	</a>
+	<a href="#" class="galleryImg" data-toggle="modal" data-target="#imageModal"">
+		<image src='img/inside7.jpg' class='img'></image>
+	</a>
+	<a href="#" class="galleryImg" data-toggle="modal" data-target="#imageModal"">
+		<image src='img/inside8.jpg' class='img'></image>
+	</a>
+	<a href="#" class="galleryImg" data-toggle="modal" data-target="#imageModal"">
+		<image src='img/inside9.jpg' class='img'></image>
+	</a>
+	<a href="#" class="galleryImg" data-toggle="modal" data-target="#imageModal"">
+		<image src='img/inside10.jpg' class='img'></image>
+	</a>
+	<a href="#" class="galleryImg" data-toggle="modal" data-target="#imageModal"">
+		<image src='img/inside11.jpg' class='img'></image>
+	</a>
+</div>
+
+<div class="modal fade" id="imageModal" tabindex="-1">
+	<div class="modal-dialog modal-dialog-centered modal-lg">
+		<div class="modal-content" style='background-color: #A0A0A0'>
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">×</button>
+			</div>
+			<div class="modal-body" >
+				<img src="" id="imagepreview" style="width: 400px; height: 264px;" >
+			</div>
+			<div class='modal-footer'>
+			</div>
+		</div>
+	</div>
+</div>
+

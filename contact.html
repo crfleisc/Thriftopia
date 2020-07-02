@@ -1,0 +1,70 @@
+<script>
+	var coordinates = [-114.0618, 50.9969];
+	// Creates the map
+	var map = new ol.Map({
+		target: document.getElementById('map'),
+		layers: [
+			new ol.layer.Tile({
+				source: new ol.source.OSM()
+			})
+		],
+		view: new ol.View({
+			center: ol.proj.fromLonLat(coordinates),
+			zoom: 17
+		})
+	});
+
+	// Create marker on the map
+	var marker = new ol.Feature({
+		geometry: new ol.geom.Point(
+			ol.proj.fromLonLat(coordinates)
+		),  
+	});
+	var vectorSource = new ol.source.Vector({
+		features: [marker]
+	});
+	var markerVectorLayer = new ol.layer.Vector({
+		source: vectorSource,
+	});
+	map.addLayer(markerVectorLayer);
+</script>
+
+<h4 class='pl-3 pt-3 mb-0 bg-light'>Contact Us</h4>
+
+<div class='row bg-light mx-0'>
+	<div class='col-md bg-light'>
+		<p class='bg-light pl-3 pt-2'>
+			South Location:<br>
+			214-62 Ave SE<br>
+			Calgary, AB<br>
+			T2H 2E6<br>
+			Tel: 403.452.2025<br>
+			<br>
+			OPEN Daily - 10AM-6PM<br>
+			CLOSED MOST HOLIDAYS<br>
+		</p>
+		<div class='container bg-light' style='display: inline-block'>
+			<a href='https://plus.google.com/+Thriftopiayyc/posts'><img class='float-left pr-1' src='img/googlePlus.webp'></a>
+			<a href='https://twitter.com/hashtag/thriftopia?lang=en'><img class='float-left pr-1' src='img/twitter.webp'></a>
+			<a href='https://www.facebook.com/thriftopiayyc/'><img class='float-left pr-1' src='img/facebook.webp'></a>
+		</div>
+	</div>
+
+	<div class='col-md bg-light'>
+		<form action='mail.php' method='post' class='was-validated bg-light'>
+			<div class='form-group bg-light'>
+				<input type='text' class='form-control bg-light' id='uname' placeholder='Name *' name='uname' required>
+				<div class='invalid-feedback bg-light'>Name Required</div>				
+			</div>
+			<div class='form-group bg-light'>
+				<input type='email' class='form-control bg-light' placeholder='Email *' name='email' id='email' required>
+				<div class='invalid-feedback bg-light'>Email Required</div>
+			</div>
+			<input type='text' class='form-control' placeholder='Subject' id='subject' name='subject'>
+			<textarea class='form-control' rows='5' id='message' name='message' placeholder='Message... ' required></textarea>
+			<button id='submitBtn' type='submit' class='btn btn-primary my-2' value='submit'>Submit</button>
+		</form>
+	</div>
+</div>
+
+<div class='container px-0' id='map' style='height:400px'></div>
